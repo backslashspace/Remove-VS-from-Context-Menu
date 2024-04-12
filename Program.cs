@@ -8,7 +8,7 @@ namespace RegRemover
         {
             TestKeys();
 
-            if (TodoInfo.RM_Shell && TodoInfo.RM_Background)
+            if (!TodoInfo.RM_Shell && !TodoInfo.RM_Background)
             {
                 Console.WriteLine("No Visual Studio keys found, nothing to do");
 
