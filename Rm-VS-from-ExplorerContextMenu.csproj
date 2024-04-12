@@ -55,6 +55,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="app.manifest" />
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="imageres_5376.ico" />

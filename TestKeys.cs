@@ -14,6 +14,10 @@ namespace RegRemover
             catch
             {
                 Console.WriteLine("Unable to open key: HKLM:SOFTWARE\\Classes\\Directory");
+
+                Console.Write("Press return to exit: ");
+                Console.ReadLine();
+
                 Environment.Exit(-1);
                 throw;
             }

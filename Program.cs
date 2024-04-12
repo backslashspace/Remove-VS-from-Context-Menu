@@ -10,7 +10,11 @@ namespace RegRemover
 
             if (TodoInfo.RM_Shell && TodoInfo.RM_Background)
             {
-                Console.WriteLine("No Visual Studio keys found, nothing to do, exiting..");
+                Console.WriteLine("No Visual Studio keys found, nothing to do");
+
+                Console.Write("Press return to exit: ");
+                Console.ReadLine();
+
                 return;
             }
 
@@ -24,9 +28,12 @@ namespace RegRemover
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Unable to removed [shell\\AnyCode]!\nError was {ex.Message}\nExiting..");
-                    Environment.Exit(-1);
+                    Console.WriteLine($"Unable to removed [shell\\AnyCode]!\nError was {ex.Message}");
 
+                    Console.Write("Press return to exit: ");
+                    Console.ReadLine();
+
+                    Environment.Exit(-1);
                 }
             }
 
@@ -40,13 +47,19 @@ namespace RegRemover
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Unable to removed [background\\shell\\AnyCode]!\nError was {ex.Message}\nExiting..");
-                    Environment.Exit(-1);
+                    Console.WriteLine($"Unable to removed [background\\shell\\AnyCode]!\nError was {ex.Message}");
 
+                    Console.Write("Press return to exit: ");
+                    Console.ReadLine();
+
+                    Environment.Exit(-1);
                 }
             }
 
-            Console.WriteLine("Done, exiting");
+            Console.WriteLine("Done");
+
+            Console.Write("Press return to exit: ");
+            Console.ReadLine();
         }
     }
 }
